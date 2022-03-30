@@ -1,9 +1,17 @@
+[hostname]
+ssh_only = true
+format = "[/](bold #525453) [歷 $hostname](bold green) "
+disabled = false
+
 [username]
-style_user = "#ffbe29 bold"
+format = "[ $user](#ffbe29 bold) "
 show_always = true
 
 [directory]
-style= "#6629ff bold"
+format = "[/](bold #525453) [ $path](#6629ff bold) "
+
+[package]
+format = "[/](bold #525453) [📦 $version](208 bold) "
 
 [cmake]
 format = "via [$symbol]($style)"
@@ -22,12 +30,16 @@ format = "via [$symbol]($style)"
 
 [git_branch]
 style = "red"
+format = "[/](bold #525453) [ $branch](red) "
 
 [git_state]
 disabled = true
 
 [git_status]
 disabled = true
+
+[docker_context]
+format = "via [🐋 $context](blue bold)"
 
 [dotnet]
 format = "[$symbol(🎯 $tfm )]($style)"
